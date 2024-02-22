@@ -85,12 +85,6 @@ CREATE TABLE [dbo].[Department](
 )
 GO
 
-CREATE TABLE [dbo].[Program](
-    [ID] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [Name] [varchar](120) NOT NULL,
-    [DepartmentID] [int] FOREIGN KEY REFERENCES [dbo].[Department](ID)
-)
-GO
 
 CREATE TABLE [dbo].[UniversityUser](
     [UniversityID] [int] FOREIGN KEY REFERENCES [dbo].[University](ID),
@@ -132,7 +126,8 @@ CREATE TABLE [dbo].[StudentFundRequest] (
     [ApplicationDate] [date] DEFAULT GETDATE(),
     [StatusID] [int] FOREIGN KEY REFERENCES [dbo].[Status],
     [Comment] [varchar](255) NOT NULL,
-    [StudentID] [int] FOREIGN KEY REFERENCES [dbo].[Student](ID)
+    [StudentID] [int] FOREIGN KEY REFERENCES [dbo].[Student](ID),    
+    [DepartmentID] [int] FOREIGN KEY REFERENCES [dbo].[Department](ID)
 )
 GO
 
