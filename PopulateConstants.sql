@@ -1,15 +1,15 @@
 INSERT INTO
     [dbo].[Provinces] ([ProvinceName])
 VALUES
-    ('Limpopo'),
-    ('Gauteng'),
-    ('Mpumalanga'),
-    ('KwaZulu-Natal'),
-    ('North West'),
-    ('Western Cape'),
-    ('Free State'),
     ('Eastern Cape'),
-    ('Northern Cape');
+    ('Free State'),
+    ('Gauteng'),
+    ('KwaZulu-Natal'),
+    ('Limpopo'),
+    ('Mpumalanga'),
+    ('North West'),
+    ('Northern Cape'),
+    ('Western Cape');
 
 
 INSERT INTO
