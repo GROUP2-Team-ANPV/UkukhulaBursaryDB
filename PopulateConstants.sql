@@ -11,7 +11,6 @@ VALUES
     ('Northern Cape'),
     ('Western Cape');
 
-
 INSERT INTO
     [dbo].[Role] ([RoleType])
 VALUES
