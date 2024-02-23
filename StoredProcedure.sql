@@ -1,4 +1,4 @@
-CREATE PROCEDURE AddUniverityAndUser
+CREATE PROCEDURE AddUniversityAndUser
     @UniversityName VARCHAR(120),
     @ProvinceID INT,
     @FirstName VARCHAR(120),
