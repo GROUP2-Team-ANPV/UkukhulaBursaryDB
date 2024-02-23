@@ -39,7 +39,7 @@ CREATE TABLE [dbo].[University](
     [ID] [int] IDENTITY(1, 1) PRIMARY KEY NOT NULL,
     [Name] [varchar](120),
     [ProvinceID] [int] FOREIGN KEY REFERENCES [dbo].[Provinces](ID),    
-    [ContactID] [int] FOREIGN KEY REFERENCES [dbo].[ContactDetails](ID)
+    [ContactPerson] [int] FOREIGN KEY REFERENCES [dbo].[User](ID)
 )
 GO
 
