@@ -35,6 +35,15 @@ CREATE TABLE [dbo].[ContactDetails](
 )
 GO
 
+CREATE TABLE [dbo].[User](
+    [ID] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    [FirstName] [varchar](120) NOT NULL,
+    [LastName] [varchar](120) NOT NULL,
+    [ContactID] [int] FOREIGN KEY REFERENCES [dbo].[ContactDetails](ID),
+    [RoleID] [int] FOREIGN KEY REFERENCES [dbo].[Role](ID)
+)
+GO
+
 CREATE TABLE [dbo].[University](
     [ID] [int] IDENTITY(1, 1) PRIMARY KEY NOT NULL,
     [Name] [varchar](120),
@@ -70,14 +79,7 @@ CREATE TABLE [dbo].[UniversityFundAllocation](
 )
 GO
 
-CREATE TABLE [dbo].[User](
-    [ID] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [FirstName] [varchar](120) NOT NULL,
-    [LastName] [varchar](120) NOT NULL,
-    [ContactID] [int] FOREIGN KEY REFERENCES [dbo].[ContactDetails](ID),
-    [RoleID] [int] FOREIGN KEY REFERENCES [dbo].[Role](ID)
-)
-GO
+
 
 CREATE TABLE [dbo].[Department](
     [ID] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
