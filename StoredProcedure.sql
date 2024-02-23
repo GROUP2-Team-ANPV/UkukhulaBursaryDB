@@ -16,8 +16,13 @@ BEGIN
         DECLARE @ContactID INT;
         DECLARE @UserID INT;
 
-        INSERT INTO [dbo].[University] ([Name], [ProvinceID])
-        VALUES (@UniversityName, @ProvinceID);
+		INSERT INTO [dbo].[User] ([FirstName], [LastName], [ContactID], [RoleID])
+        VALUES (@FirstName, @LastName, @ContactID, @RoleID);
+
+        SET @UserID = SCOPE_IDENTITY(); 
+
+        INSERT INTO [dbo].[University] ([Name], [ProvinceID], [ContactPerson])
+        VALUES (@UniversityName, @ProvinceID,@UserID);
 
         SET @UniversityID = SCOPE_IDENTITY(); 
 
@@ -26,10 +31,6 @@ BEGIN
 
         SET @ContactID = SCOPE_IDENTITY(); 
 
-        INSERT INTO [dbo].[User] ([FirstName], [LastName], [ContactID], [RoleID])
-        VALUES (@FirstName, @LastName, @ContactID, @RoleID);
-
-        SET @UserID = SCOPE_IDENTITY(); 
 
         INSERT INTO [dbo].[UniversityUser] ([UniversityID], [UserID], [DepartmentID])
         VALUES (@UniversityID, @UserID, @DepartmentID);
