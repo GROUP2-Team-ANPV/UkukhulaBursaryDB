@@ -50,3 +50,15 @@ VALUES
     ('Transcript'),
     ('ID');
 GO
+
+
+INSERT INTO [dbo].[Department] ([Name]) 
+VALUES 
+    ('Computer Science'),
+    ('Computer Engineering'),
+    ('Computer Game Design'),
+    ('Software Engineering'),
+    ('Data Science'),
+    ('Artificial Intelligence'),
+    ('Cybersecurity'),
+    ('Information Systems');

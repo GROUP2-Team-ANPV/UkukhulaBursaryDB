@@ -4,9 +4,8 @@ AS
 BEGIN
     BEGIN TRY
         SELECT [dbo].[University].[Name],
-               [dbo].[Provinces].[Name],
+               [dbo].[Provinces].[ProvinceName],
                CONCAT([dbo].[User].[FirstName], ' ', [dbo].[User].[LastName]) AS ContactPerson,
-               [dbo].[UniversityUser].[DepartmentID],
                [dbo].[ContactDetails].[Email],
                [dbo].[ContactDetails].[PhoneNumber]
         FROM [dbo].[University]
