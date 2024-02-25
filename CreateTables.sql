@@ -109,7 +109,6 @@ CREATE TABLE [dbo].[Student] (
     [GenderID] [INT] FOREIGN KEY REFERENCES [dbo].[Gender](ID),
     [UserID] [int] FOREIGN KEY REFERENCES [dbo].[User](ID),
     [RaceID] [int] FOREIGN KEY REFERENCES [dbo].[Race](ID),
-    [ProgramID] [int] FOREIGN KEY REFERENCES [dbo].[Program](ID)
 )
 GO
 
