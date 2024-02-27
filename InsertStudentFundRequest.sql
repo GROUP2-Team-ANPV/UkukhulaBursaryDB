@@ -30,7 +30,7 @@ BEGIN
         SET @ContactID = SCOPE_IDENTITY() 
 
         INSERT INTO [User] (FirstName, LastName, ContactID, RoleID)
-        VALUES (@FirstName, @LastName, @ContactID, NULL)
+        VALUES (@FirstName, @LastName, @ContactID, 3)
 
         SET @UserID = SCOPE_IDENTITY() 
 
